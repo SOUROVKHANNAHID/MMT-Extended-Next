@@ -17,7 +17,7 @@ jobs:
           sudo mv changelog.md ./CHANGELOG_TEMPLATE.md
           sudo cp .github/patch/module.prop ./
           sudo cp .github/patch/update.json ./
-          sudo cp .github/patch/CHANGELOG.md /
+          sudo cp .github/patch/CHANGELOG.md ./
           sudo cp .github/patch/CHANGELOG_TEMPLATE_MOD.md ./
           sudo cp .github/patch/LICENSE ./
           sudo cp .github/patch/LICENSE_TEMPLATE ./
