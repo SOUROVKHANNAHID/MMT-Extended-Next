@@ -14,7 +14,7 @@ jobs:
 
       - name: Copying files to necessary dirs
         run:  |
-          sudo mv changelog.md ./CHANGELOG_TEMPLATE.md
+          sudo mv -f changelog.md ./CHANGELOG_TEMPLATE.md
           sudo cp .github/patch/module.prop ./
           sudo cp .github/patch/update.json ./
           sudo cp .github/patch/CHANGELOG.md ./
@@ -22,6 +22,7 @@ jobs:
           sudo cp .github/patch/LICENSE ./
           sudo cp .github/patch/LICENSE_TEMPLATE ./
           sudo cp .github/patch/README.md ./
+          sed -i 's/*   MMT Extended by Zackptg5 @ XDA   */*  MMT Extended Next by Ali BEYAZ  */g' common/functions.sh
 
       - name: Commit and push changes
         uses: symbuzzer/fork-push-changes@master
