@@ -14,7 +14,7 @@ jobs:
 
       - name: Copying files to necessary dirs
         run:  |
-          sudo mv -f changelog.md ./CHANGELOG_TEMPLATE.md
+          [ -e "changelog.md" ] && sudo mv -f changelog.md ./CHANGELOG_TEMPLATE.md
           sudo cp .github/patch/module.prop ./
           sudo cp .github/patch/update.json ./
           sudo cp .github/patch/CHANGELOG.md ./
